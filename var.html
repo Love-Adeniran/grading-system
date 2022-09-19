@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+    <link rel="stylesheet" href="/Assignment/var.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome! <br> To myGrading System</h1>
+        <input type="number" id="userScore" placeholder="Enter your Score here">
+        <br><br>
+        <button onclick="checkGrade()">Check</button><br><br>
+        <div id="disp"><h3 style="color:red;">You have not added music!</h3></div>
+    </div>
+
+    <script>
+        display = document.getElementById("disp");
+        var mySong1 = new Audio('excellent.wav');
+        var mySong2 = new Audio("credit.mp3");
+        var mySong3 = new Audio("average.mp3");
+        var mySong4 = new Audio("fail.m4a")
+        var mySong5 = new Audio("invalid.m4a")
+        function checkGrade(){
+            var scoreOfUser = userScore.value;
+            // var mySong = new Audio();
+            // alert("na " +scoreOfUser+ " i get");
+            if(scoreOfUser == ''){
+                display.style.color = 'red';
+                display.innerHTML = "Kindly supply your Score!";
+                // alert(display)
+            }
+            else if(scoreOfUser < 0){
+                // alert("kindly supply a valid score!");
+                display.style.color = 'green';
+                display.innerHTML = "kindly supply a valid score!";
+            }
+            else if(scoreOfUser >= 0 && scoreOfUser < 40){
+                // alert("You failed woefully!");
+                display.style.color = 'green';
+                display.innerHTML = "You failed woefully! F";
+            }
+            else if(scoreOfUser >= 40 && scoreOfUser < 45){
+                // alert("phew! You had a narrow escape from failing!");
+                display.style.color = 'green';
+                display.innerHTML = "phew! You had a narrow escape from failing! E";
+            }
+            else if(scoreOfUser >= 45 && scoreOfUser < 50){
+                // alert("You Passed! But this your effort is not enough");
+                display.style.color = 'green';
+                display.innerHTML = "You Passed! But this your effort is not enough, D";
+            }
+            else if(scoreOfUser >= 50 && scoreOfUser < 60){
+                // alert("You Passed with a Credit!");
+                display.style.color = 'green';
+                display.innerHTML = "You Passed with a Credit! C";
+                mySong3.play();
+            }
+            else if(scoreOfUser >= 60 && scoreOfUser < 70){
+                // alert("A Very Good result keep it up!");
+                display.style.color = 'green';
+                display.innerHTML = "A Very Good result keep it up! B";
+            }
+            else if(scoreOfUser >= 70 && scoreOfUser <= 100){
+                // alert("Wow! An Excellent result! You are the best!");
+                display.style.color = 'green';
+                mySong1.play();
+                display.innerHTML = "Wow! An Excellent result! You are the best! A";
+            }
+            else{
+                display.style.color = 'red';
+                // alert("Enter a valid score to grade you in Percentage");
+                display.innerHTML = "Enter a valid score to grade you in Percentage!";
+            }
+        }
+        
+    </script>
+</body>
+</html>

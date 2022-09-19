@@ -1,0 +1,54 @@
+/* body{
+    background-image: url("./images/officeImage4.jpeg");
+    width: 100%;
+    background-color: aqua; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center; 
+} */
+body{
+    background-image: linear-gradient(#00881d, #fff);
+}
+.container{
+    max-width: 100%;
+    width: 30%;
+    height: 50vh;
+    position: relative;
+    top: 20%;
+    left: 25%;
+    background-color: #f7c882;
+    text-align: center;
+    margin: 10%;
+    padding: 2%;
+    box-sizing: border-box;
+    /* height: 80%; */
+}
+
+input{
+    margin: 5%;
+    padding: 4%;
+    border-radius: 40px;
+    outline: none;
+}
+input:focus{
+    border: 5px dotted #006b12;
+    outline: none;
+}
+button{
+    padding: 2%;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 43%;
+    border: 1px solid #fff;
+    font-size: small;
+    background-color: #006b12;
+    color: #fff;
+}
+/* #disp{
+    color
+} */
+/* button:hover{
+    background-color: #f7c882;
+} */
